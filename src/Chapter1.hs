@@ -475,7 +475,7 @@ next = (+ 1)
 
 -- DON'T FORGET TO SPECIFY THE TYPE IN HERE
 lastDigit :: Int -> Int
-lastDigit x = x `mod` 10
+lastDigit x = abs x `mod` 10
 
 -- |
 -- =⚔️= Task 6
@@ -618,7 +618,9 @@ isVowel c
 -- Try to introduce variables in this task (either with let-in or where) to avoid
 -- specifying complex expressions.
 sumLast2 :: Int -> Int
-sumLast2 n = lastDigit n + lastDigit (n `div` 10)
+sumLast2 x = lastDigit n + lastDigit (n `div` 10)
+  where
+    n = abs x
 
 -- |
 -- =💣= Task 10*
@@ -637,9 +639,11 @@ sumLast2 n = lastDigit n + lastDigit (n `div` 10)
 -- You need to use recursion in this task. Feel free to return to it later, if you
 -- aren't ready for this boss yet!
 firstDigit :: Int -> Int
-firstDigit n
+firstDigit x
   | n `div` 10 == 0 = n
   | otherwise = firstDigit (n `div` 10)
+  where
+    n = abs x
 
 {-
 You did it! Now it is time to open a pull request with your changes
