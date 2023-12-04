@@ -219,11 +219,11 @@ ghci> :q
 --
 -- Boolean 'and' operator:
 -- >>> :t (&&)
--- && :: Bool -> Bool -> Bool
+-- (&&) :: Bool -> Bool -> Bool
 --
 -- Addition of two numbers:
 -- >>> :t (+)
--- :t (+) :: Num a => a -> a -> a
+-- (+) :: Num a => a -> a -> a
 --
 -- Maximum of two values:
 -- >>> :t max
